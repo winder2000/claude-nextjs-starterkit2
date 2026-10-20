@@ -20,6 +20,8 @@ const orders = [
   { id: "ORD-004", product: "디자인 시스템", status: "완료", date: "2026-10-12", amount: "₩149,000" },
 ];
 
+const SKELETON_ROWS = ["row-1", "row-2", "row-3"] as const;
+
 const statusVariant: Record<string, "default" | "secondary" | "destructive" | "outline"> = {
   완료: "default",
   처리중: "secondary",
@@ -113,8 +115,8 @@ export function DashboardClient() {
                   <Skeleton className="h-4 w-1/2" />
                 </div>
               </div>
-              {Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="space-y-2">
+              {SKELETON_ROWS.map((id) => (
+                <div key={id} className="space-y-2">
                   <Skeleton className="h-4 w-full" />
                   <Skeleton className="h-4 w-4/5" />
                 </div>

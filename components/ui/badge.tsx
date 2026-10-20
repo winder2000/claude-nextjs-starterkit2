@@ -1,5 +1,6 @@
 "use client"
 
+// 배지 컴포넌트 — @base-ui/react useRender 기반, variant로 상태(default/secondary/destructive 등)를 표현한다
 import { mergeProps } from "@base-ui/react/merge-props"
 import { useRender } from "@base-ui/react/use-render"
 import { cva, type VariantProps } from "class-variance-authority"

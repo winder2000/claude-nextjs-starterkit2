@@ -1,9 +1,6 @@
-"use client";
-
 import Link from "next/link";
-import { useTheme } from "next-themes";
-import { Sun, Moon, Code2, Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Code2, Menu } from "lucide-react";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 import {
   Sheet,
   SheetContent,
@@ -19,10 +16,6 @@ const navLinks = [
 ];
 
 export function Header() {
-  const { theme, setTheme } = useTheme();
-
-  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
-
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-6xl mx-auto px-4 flex h-14 items-center justify-between">
@@ -47,15 +40,7 @@ export function Header() {
 
         {/* 우측 액션 */}
         <div className="flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            aria-label="테마 전환"
-          >
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          </Button>
+          <ThemeToggle />
 
           {/* 모바일 메뉴 */}
           <Sheet>

@@ -1,5 +1,6 @@
 "use client"
 
+// 버튼 컴포넌트 — @base-ui/react 기반, variant(default/outline/ghost 등)와 size를 지원한다
 import { Button as ButtonPrimitive } from "@base-ui/react/button"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "cn"

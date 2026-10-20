@@ -1,3 +1,4 @@
+// 카드 컴포넌트 — Card/CardHeader/CardTitle/CardDescription/CardContent/CardFooter/CardAction 구성
 import * as React from "react"
 import { cn } from "cn"
 
